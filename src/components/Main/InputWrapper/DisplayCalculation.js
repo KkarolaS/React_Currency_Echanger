@@ -1,9 +1,9 @@
-const DisplayCalculation = () => {
+const DisplayCalculation = ({ exchangeResult = 0 }) => {
   return (
     <>
       <p className="text">to</p>
       <p id="currency-value" data-test="currency-value" className="text-amount">
-        0 PLN
+        {exchangeResult} PLN
       </p>
     </>
   );
