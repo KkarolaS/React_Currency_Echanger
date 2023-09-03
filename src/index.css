@@ -1,0 +1,14 @@
+/* https://colorhunt.co/palette/ebe76cf0b86eed7b7b836096*/
+/* For colors used: https://colornamer.robertcooper.me/*/
+
+:root {
+  --limelight: #ebe76c;
+  --olden-amber: #f0b86e;
+  --siesta-rose: #ed7b7b;
+  --wisteria-purple: #836096;
+  --obsidian-shell: #410e5c;
+}
+
+body {
+  background-color: var(--limelight);
+}
