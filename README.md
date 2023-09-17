@@ -18,7 +18,7 @@ https://github.com/KkarolaS/React_Currency_Echanger.git
 Here you can find link to Netlify Repo:
 
 ```bash
-
+https://react-currency-exchanger2projectkaro.netlify.app/
 ```
 
 ## Authors and acknowledgment
