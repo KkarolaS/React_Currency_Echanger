@@ -1,0 +1,59 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-amount {
+  width: 300px;
+}
+
+.input-amount,
+.exchange-btn {
+  height: 50px;
+  padding-left: 15px;
+  border-radius: 35px;
+  color: rgb(33, 20, 80);
+  border-color: white;
+  background-color: var(--limelight);
+}
+
+.currencies-options {
+  width: 300px;
+  height: 50px;
+}
+
+.select-options {
+  width: 300px;
+  height: 50px;
+  outline: none;
+  border-color: white;
+  background-color: var(--limelight);
+  cursor: pointer;
+}
+
+.exchange-btn {
+  border-color: var(--obsidian-shell);
+  background-color: var(--wisteria-purple);
+  color: white;
+  align-self: center;
+  width: 100px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .form-wrapper {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .input-amount {
+    width: 160px;
+  }
+
+  .currencies-options,
+  .select-options {
+    width: 100px;
+  }
+}

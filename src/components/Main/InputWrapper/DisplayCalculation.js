@@ -1,3 +1,5 @@
+import "./DisplayCalculation.css";
+
 const DisplayCalculation = ({ exchangeResult = 0 }) => {
   return (
     <>

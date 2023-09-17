@@ -1,3 +1,5 @@
+import "./ErrorInfo.css";
+
 const ErrorInfo = ({ text }) => {
   return (
     <section className="error-wrapper">

@@ -4,7 +4,8 @@ import {
   fetchApiCurrencies,
   isLoader,
 } from "../../../../services/fetchApiCurrencies";
-import Option from "./Options";
+import Options from "./Options";
+import "./Form.css";
 
 const Form = ({ handleResult, handleError, handleLoader }) => {
   const [valueSelect, setValueSelect] = useState("choose");
@@ -63,7 +64,7 @@ const Form = ({ handleResult, handleError, handleLoader }) => {
           value={valueSelect}
           onChange={getSelectValue}
         >
-          <Option />
+          <Options />
         </select>
       </div>
       <Input

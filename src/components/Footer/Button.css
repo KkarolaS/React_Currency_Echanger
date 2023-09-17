@@ -1,0 +1,13 @@
+.footer-icon-btn {
+  background-color: var(--siesta-rose);
+  color: var(--obsidian-shell);
+  border-radius: 50%;
+  width: 35px;
+  border: none;
+}
+
+@media screen and (min-width: 992px) {
+  .footer-icon-btn {
+    width: 45px;
+  }
+}

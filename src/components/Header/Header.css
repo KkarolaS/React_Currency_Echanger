@@ -1,0 +1,14 @@
+.app-header {
+  height: 140px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .app-header {
+    height: 200px;
+    padding: 20px 40px;
+  }
+}

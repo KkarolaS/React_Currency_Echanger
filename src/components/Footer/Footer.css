@@ -1,0 +1,32 @@
+.app-footer {
+  margin-top: auto;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.company-name {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.fb-insta-logo-container {
+  height: 35px;
+  display: flex;
+  gap: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .app-footer {
+    padding: 20px 40px;
+  }
+
+  .company-name {
+    font-size: 16px;
+  }
+  .fb-insta-logo-container {
+    height: 45px;
+    gap: 10px;
+  }
+}

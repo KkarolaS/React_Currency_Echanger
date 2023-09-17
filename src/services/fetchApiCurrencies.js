@@ -4,7 +4,6 @@ export let isLoader = false;
 
 export const fetchApiCurrencies = async (selectValue) => {
   const URL = `https://api.nbp.pl/api/exchangerates/rates/c/${selectValue}/?format=json`;
-
   try {
     isLoader = true;
     const response = await axios.get(URL);
@@ -14,6 +13,7 @@ export const fetchApiCurrencies = async (selectValue) => {
     console.error(error);
     return "Error";
   } finally {
+    console.log("done");
     isLoader = false;
   }
 };

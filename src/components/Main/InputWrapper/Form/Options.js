@@ -1,12 +1,12 @@
 import { defaultOptions } from "../../../../data/defaultOptions";
 
-const Option = () => {
+const Options = () => {
   const options = defaultOptions;
   return options.map((option) => (
-    <option className="option" key={option.value} value={option.value}>
+    <option key={option.value} value={option.value}>
       {option.text}
     </option>
   ));
 };
 
-export default Option;
+export default Options;

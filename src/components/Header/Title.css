@@ -1,0 +1,30 @@
+.header-text-wrapper {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.header-subtitle {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 992px) {
+  .header-text-wrapper {
+    width: 400px;
+  }
+
+  .header-title {
+    font-size: 32px;
+  }
+
+  .header-subtitle {
+    font-size: 20px;
+  }
+}

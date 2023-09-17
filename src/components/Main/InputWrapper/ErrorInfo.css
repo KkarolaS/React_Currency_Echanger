@@ -1,0 +1,21 @@
+.error-wrapper {
+  margin-top: 20px;
+  align-content: center;
+}
+
+.error-info {
+  color: rgb(253, 8, 8);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 992px) {
+  .btn {
+    width: 130px;
+    height: 38px;
+  }
+
+  .error-wrapper {
+    margin-top: 60px;
+  }
+}

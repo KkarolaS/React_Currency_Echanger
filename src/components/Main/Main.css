@@ -1,0 +1,20 @@
+.currency-options-conatiner {
+  min-width: 350px;
+  min-height: 350px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 5px solid var(--wisteria-purple);
+  background-color: var(--olden-amber);
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .currency-options-conatiner {
+    padding: 20px 60px;
+    align-items: start;
+    justify-content: start;
+  }
+}

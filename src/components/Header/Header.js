@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import Title from "./Title";
+import "./Header.css";
 
 const Header = () => {
   return (

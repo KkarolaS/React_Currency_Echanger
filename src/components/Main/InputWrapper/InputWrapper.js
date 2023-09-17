@@ -3,6 +3,7 @@ import DisplayCalculation from "../InputWrapper/DisplayCalculation";
 import Form from "./Form/Form";
 import { useState } from "react";
 import ErrorInfo from "./ErrorInfo";
+import "./InputWrapper.css";
 
 const InputWrapper = () => {
   const [result, setResult] = useState(0);

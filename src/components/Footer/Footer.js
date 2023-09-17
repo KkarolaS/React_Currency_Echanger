@@ -1,4 +1,5 @@
 import Button from "./Button";
+import "./Footer.css";
 
 const Footer = () => {
   return (
