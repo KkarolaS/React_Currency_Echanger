@@ -1,7 +1,7 @@
 const Loader = () => {
   return (
     <div className="loader-wrapper">
-      <button className="btn btn-danger hidden" type="button" disabled>
+      <button className="btn btn-danger" type="button" disabled>
         <span
           className="spinner-border spinner-border-sm"
           aria-hidden="true"

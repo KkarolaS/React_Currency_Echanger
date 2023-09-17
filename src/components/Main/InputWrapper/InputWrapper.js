@@ -7,6 +7,7 @@ import ErrorInfo from "./ErrorInfo";
 const InputWrapper = () => {
   const [result, setResult] = useState(0);
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const getValues = (number, rate) => {
     setResult(number * rate);
@@ -16,13 +17,20 @@ const InputWrapper = () => {
     setError(error);
   };
 
+  const getLoadingStatus = (status) => {
+    setIsLoading(status);
+  };
   return (
     <>
       <ErrorInfo text={error} />
       <div className="input-wrapper">
-        <Form handleResult={getValues} handleError={getError} />
+        <Form
+          handleResult={getValues}
+          handleError={getError}
+          handleLoader={getLoadingStatus}
+        />
         <DisplayCalculation exchangeResult={result} />
-        <Loader />
+        {isLoading ? <Loader /> : <></>}
       </div>
     </>
   );

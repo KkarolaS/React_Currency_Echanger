@@ -1,9 +1,12 @@
 import Input from "./Input";
 import { useEffect, useState } from "react";
-import { fetchApiCurrencies } from "../../../../services/fetchApiCurrencies";
+import {
+  fetchApiCurrencies,
+  isLoader,
+} from "../../../../services/fetchApiCurrencies";
 import Option from "./Options";
 
-const Form = ({ handleResult, handleError }) => {
+const Form = ({ handleResult, handleError, handleLoader }) => {
   const [valueSelect, setValueSelect] = useState("choose");
   const [rate, setRate] = useState(0);
   const [number, setNumber] = useState(0);
@@ -17,29 +20,25 @@ const Form = ({ handleResult, handleError }) => {
     if (valueSelect !== "choose") {
       setError("");
       if (number > 0) {
-        fetchApiCurrencies(valueSelect)
-          .then((data) => {
+        fetchApiCurrencies(valueSelect).then((data) => {
+          if (data !== "Error") {
             setRate(data);
-            console.log(data);
-          })
-          .catch((error) => {
-            console.log(error);
-            setNumber(0);
-            setError("Błąd serwera");
-            handleError(error);
-          });
+          } else {
+            setError("Błąd serwisu. Spróbuj ponownie później");
+          }
+        });
       } else {
         setError("Kwota powinna być większa niż 0!");
-        setNumber(0);
+        setRate(0);
       }
     } else {
       setError("Podaj wartość i wybierz walutę");
+      setRate(0);
     }
   }, [valueSelect, number, handleError]);
 
   const getInput = (e) => {
     setNumber(e.target.value);
-    console.log(e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -47,6 +46,7 @@ const Form = ({ handleResult, handleError }) => {
     if (typeof rate === "number") {
       handleResult(rate, number);
       handleError(error);
+      handleLoader(isLoader);
     }
   };
 
