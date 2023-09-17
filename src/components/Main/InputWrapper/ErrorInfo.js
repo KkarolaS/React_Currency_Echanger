@@ -1,6 +1,6 @@
-const ErrorInfo = ({ text, className }) => {
+const ErrorInfo = ({ text }) => {
   return (
-    <section className={className}>
+    <section className="error-wrapper">
       <p className="error-info">{text}</p>
     </section>
   );

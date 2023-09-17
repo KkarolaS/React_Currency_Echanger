@@ -17,23 +17,29 @@ const Form = ({ handleResult, handleError }) => {
     if (valueSelect !== "choose") {
       setError("");
       if (number > 0) {
-        fetchApiCurrencies(valueSelect).then((data) => {
-          setRate(data);
-          console.log(data);
-        });
+        fetchApiCurrencies(valueSelect)
+          .then((data) => {
+            setRate(data);
+            console.log(data);
+          })
+          .catch((error) => {
+            console.log(error);
+            setNumber(0);
+            setError("Błąd serwera");
+            handleError(error);
+          });
       } else {
         setError("Kwota powinna być większa niż 0!");
+        setNumber(0);
       }
     } else {
       setError("Podaj wartość i wybierz walutę");
     }
-  }, [valueSelect, number]);
+  }, [valueSelect, number, handleError]);
 
   const getInput = (e) => {
-    if (e.target.value) {
-      setNumber(e.target.value);
-      console.log(e.target.value);
-    }
+    setNumber(e.target.value);
+    console.log(e.target.value);
   };
 
   const handleSubmit = (e) => {

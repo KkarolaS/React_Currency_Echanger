@@ -12,6 +12,7 @@ export const fetchApiCurrencies = async (selectValue) => {
   } catch (error) {
     //    errorInfo.textContent = "Błąd serwera. Spróbuj ponownie później";
     console.error(error);
+    return error;
   } finally {
     console.log("done");
     //   loader.classList.add("hidden");

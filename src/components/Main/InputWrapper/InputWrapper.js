@@ -9,15 +9,7 @@ const InputWrapper = () => {
   const [error, setError] = useState("");
 
   const getValues = (number, rate) => {
-    if (number && rate) {
-      if (number > 0) {
-        setResult(number * rate);
-      } else {
-        setResult(0);
-      }
-    } else {
-      setResult(0);
-    }
+    setResult(number * rate);
   };
 
   const getError = (error) => {
@@ -26,7 +18,7 @@ const InputWrapper = () => {
 
   return (
     <>
-      <ErrorInfo text={error} className={"error-wrapper"} />
+      <ErrorInfo text={error} />
       <div className="input-wrapper">
         <Form handleResult={getValues} handleError={getError} />
         <DisplayCalculation exchangeResult={result} />
