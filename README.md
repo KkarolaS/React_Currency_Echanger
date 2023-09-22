@@ -1,6 +1,6 @@
 # Currency_Exchange_React_Project2
 
-## Welcome to my website app project (HTML + CSS + JS)
+## Welcome to my website app project (React)
 
 Hi I'm Caroline and here you can find my first React project (based on my JS Project).
 Below you can find some link to project's repository in GitHub and also link to Netlify.
