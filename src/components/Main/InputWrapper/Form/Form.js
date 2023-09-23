@@ -8,7 +8,7 @@ import Options from "./Options";
 import "./Form.css";
 
 const Form = ({ handleResult, handleError, handleLoader }) => {
-  const [valueSelect, setValueSelect] = useState("choose");
+  const [valueSelect, setValueSelect] = useState("eur");
   const [rate, setRate] = useState(0);
   const [number, setNumber] = useState(0);
   const [error, setError] = useState("");
@@ -18,22 +18,17 @@ const Form = ({ handleResult, handleError, handleLoader }) => {
   };
 
   useEffect(() => {
-    if (valueSelect !== "choose") {
-      setError("");
-      if (number > 0) {
-        fetchApiCurrencies(valueSelect).then((data) => {
-          if (data !== "Error") {
-            setRate(data);
-          } else {
-            setError("Błąd serwisu. Spróbuj ponownie później");
-          }
-        });
-      } else {
-        setError("Kwota powinna być większa niż 0!");
-        setRate(0);
-      }
+    setError("");
+    if (number > 0) {
+      fetchApiCurrencies(valueSelect).then((data) => {
+        if (data !== "Error") {
+          setRate(data);
+        } else {
+          setError("Błąd serwera. Spróbuj ponownie później");
+        }
+      });
     } else {
-      setError("Podaj wartość i wybierz walutę");
+      setError("Kwota powinna być większa niż 0! Podaj warotość");
       setRate(0);
     }
   }, [valueSelect, number, handleError]);
@@ -57,6 +52,7 @@ const Form = ({ handleResult, handleError, handleLoader }) => {
         typeName={"number"}
         className={"input-amount"}
         handleChange={getInput}
+        stepValue={0.01}
       />
       <div className="currencies-options">
         <select
