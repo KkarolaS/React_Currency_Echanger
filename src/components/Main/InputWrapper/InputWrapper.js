@@ -11,7 +11,7 @@ const InputWrapper = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const getValues = (number, rate) => {
-    setResult(number * rate);
+    setResult((number * rate).toFixed(2));
   };
 
   const getError = (error) => {
