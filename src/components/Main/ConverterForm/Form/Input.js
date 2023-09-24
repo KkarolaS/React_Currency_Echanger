@@ -1,10 +1,10 @@
-const Input = ({ typeName, className, value, handleChange, stepValue }) => {
+const Input = ({ name, typeName, className, value, stepValue }) => {
   return (
     <input
+      name={name}
       type={typeName}
       className={className}
       value={value}
-      onChange={handleChange}
       step={stepValue}
     />
   );

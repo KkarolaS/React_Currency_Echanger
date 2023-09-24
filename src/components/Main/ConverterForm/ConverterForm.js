@@ -1,17 +1,21 @@
-import Loader from "../InputWrapper/Loader";
-import DisplayCalculation from "../InputWrapper/DisplayCalculation";
+import Loader from "./Loader";
+import DisplayCalculation from "./DisplayCalculation";
 import Form from "./Form/Form";
 import { useState } from "react";
 import ErrorInfo from "./ErrorInfo";
-import "./InputWrapper.css";
+import "./ConverterForm.css";
 
-const InputWrapper = () => {
+const ConverterForm = () => {
   const [result, setResult] = useState(0);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const getValues = (number, rate) => {
-    setResult((number * rate).toFixed(2));
+    if (rate !== 0) {
+      setResult((number * rate).toFixed(2));
+    } else {
+      setResult(0);
+    }
   };
 
   const getError = (error) => {
@@ -31,10 +35,10 @@ const InputWrapper = () => {
           handleLoader={getLoadingStatus}
         />
         <DisplayCalculation exchangeResult={result} />
-        {isLoading ? <Loader /> : <></>}
+        {isLoading ? <Loader /> : null}
       </div>
     </>
   );
 };
 
-export default InputWrapper;
+export default ConverterForm;

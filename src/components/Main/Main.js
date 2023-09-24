@@ -1,10 +1,10 @@
-import InputWrapper from "./InputWrapper/InputWrapper";
+import ConverterForm from "./ConverterForm/ConverterForm";
 import "./Main.css";
 
 const Main = () => {
   return (
     <main className="currency-options-conatiner">
-      <InputWrapper />
+      <ConverterForm />
     </main>
   );
 };
