@@ -1,9 +1,9 @@
 import ConverterForm from "./ConverterForm/ConverterForm";
-import "./Main.css";
+import classes from "./Main.module.css";
 
 const Main = () => {
   return (
-    <main className="currency-options-conatiner">
+    <main className={classes.currencyOptionsConatiner}>
       <ConverterForm />
     </main>
   );

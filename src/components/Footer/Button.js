@@ -1,8 +1,8 @@
-import "./Button.css";
+import classes from "./Button.module.css";
 
 const Button = ({ classPageName }) => {
   return (
-    <button className="footer-icon-btn">
+    <button className={classes.footerIconBtn}>
       <i className={classPageName}></i>
     </button>
   );

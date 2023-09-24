@@ -1,10 +1,14 @@
-import "./DisplayCalculation.css";
+import classes from "./DisplayCalculation.module.css";
 
 const DisplayCalculation = ({ exchangeResult = 0 }) => {
   return (
     <>
-      <p className="text">to</p>
-      <p id="currency-value" data-test="currency-value" className="text-amount">
+      <p className={classes.text}>to</p>
+      <p
+        id="currency-value"
+        data-test="currency-value"
+        className={classes.textAmount}
+      >
         {exchangeResult} PLN
       </p>
     </>

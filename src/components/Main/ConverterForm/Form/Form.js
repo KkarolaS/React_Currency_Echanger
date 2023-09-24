@@ -2,7 +2,7 @@ import Input from "./Input";
 import { useEffect, useState } from "react";
 import { fetchApiCurrencies } from "../../../../services/fetchApiCurrencies";
 import Options from "./Options";
-import "./Form.css";
+import classes from "./Form.module.css";
 
 const Form = ({ handleResult, handleError, handleLoader }) => {
   const [valueSelect, setValueSelect] = useState("eur");
@@ -42,22 +42,22 @@ const Form = ({ handleResult, handleError, handleLoader }) => {
   };
 
   return (
-    <form className="form-wrapper" onSubmit={handleSubmit}>
+    <form className={classes.formWrapper} onSubmit={handleSubmit}>
       <Input
         name={"userNumber"}
         typeName={"number"}
-        className={"input-amount"}
+        className={classes.inputAmount}
         stepValue={0.01}
       />
       <div className="currencies-options">
-        <select name="selectValue" className="select-options">
+        <select name="selectValue" className={classes.selectOptions}>
           <Options />
         </select>
       </div>
       <Input
         name={"click"}
         typeName={"submit"}
-        className={"exchange-btn"}
+        className={classes.exchangeBtn}
         value={"Przelicz"}
       />
     </form>

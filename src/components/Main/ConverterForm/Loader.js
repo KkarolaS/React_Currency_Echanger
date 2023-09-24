@@ -1,8 +1,8 @@
-import "./Loader.css";
+import classes from "./Loader.module.css";
 
 const Loader = () => {
   return (
-    <div className="loader-wrapper">
+    <div className={classes.loaderWrapper}>
       <button className="btn btn-danger" type="button" disabled>
         <span
           className="spinner-border spinner-border-sm"

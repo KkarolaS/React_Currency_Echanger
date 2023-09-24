@@ -1,10 +1,10 @@
 import Logo from "./Logo";
 import Title from "./Title";
-import "./Header.css";
+import classes from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className="app-header">
+    <header className={classes.appHeader}>
       <Logo />
       <Title />
     </header>

@@ -1,4 +1,4 @@
-.footer-icon-btn {
+.footerIconBtn {
   background-color: var(--siesta-rose);
   color: var(--obsidian-shell);
   border-radius: 50%;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  .footer-icon-btn {
+  .footerIconBtn {
     width: 45px;
   }
 }

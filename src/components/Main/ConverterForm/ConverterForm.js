@@ -3,7 +3,7 @@ import DisplayCalculation from "./DisplayCalculation";
 import Form from "./Form/Form";
 import { useState } from "react";
 import ErrorInfo from "./ErrorInfo";
-import "./ConverterForm.css";
+import classes from "./ConverterForm.module.css";
 
 const ConverterForm = () => {
   const [result, setResult] = useState(0);
@@ -28,7 +28,7 @@ const ConverterForm = () => {
   return (
     <>
       <ErrorInfo text={error} />
-      <div className="input-wrapper">
+      <div className={classes.inputWrapper}>
         <Form
           handleResult={getValues}
           handleError={getError}

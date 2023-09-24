@@ -1,9 +1,9 @@
-import "./ErrorInfo.css";
+import classes from "./ErrorInfo.module.css";
 
 const ErrorInfo = ({ text }) => {
   return (
-    <section className="error-wrapper">
-      <p className="error-info">{text}</p>
+    <section className={classes.errorWrapper}>
+      <p className={classes.errorInfo}>{text}</p>
     </section>
   );
 };
