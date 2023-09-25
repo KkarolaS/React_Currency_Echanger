@@ -1,5 +1,5 @@
-import Logo from "./Logo";
-import Title from "./Title";
+import Logo from "./Logo/Logo";
+import Title from "./Title/Title";
 import classes from "./Header.module.css";
 
 const Header = () => {

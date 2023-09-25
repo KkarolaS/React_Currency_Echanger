@@ -1,8 +1,8 @@
-import Loader from "./Loader";
-import DisplayCalculation from "./DisplayCalculation";
+import Loader from "./Loader/Loader";
+import DisplayCalculation from "./DisplayCalculation/DisplayCalculation";
 import Form from "./Form/Form";
 import { useState } from "react";
-import ErrorInfo from "./ErrorInfo";
+import ErrorInfo from "./ErrorInfo/ErrorInfo";
 import classes from "./ConverterForm.module.css";
 
 const ConverterForm = () => {

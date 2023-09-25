@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import classes from "./App.module.css";
 
-function App() {
+const App = () => {
   return (
     <div className={classes.pageContainer}>
       <Header />
@@ -11,6 +11,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
