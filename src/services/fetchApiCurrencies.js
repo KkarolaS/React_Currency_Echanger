@@ -9,7 +9,5 @@ export const fetchApiCurrencies = async (selectValue) => {
   } catch (error) {
     console.error(error);
     throw error;
-  } finally {
-    console.log("done");
   }
 };
