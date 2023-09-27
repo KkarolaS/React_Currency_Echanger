@@ -7,8 +7,9 @@ import classes from "./ConverterForm.module.css";
 
 const ConverterForm = () => {
   const [result, setResult] = useState(0);
-  const [error, setError] = useState("");
+  const [error, setError] = useState("Wprowadź kwotę do przewalutowania");
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const getValues = (number, rate) => {
     if (rate !== 0) {
@@ -20,6 +21,11 @@ const ConverterForm = () => {
 
   const getError = (error) => {
     setError(error);
+    if (error !== "Wprowadź kwotę do przewalutowania") {
+      setIsError(true);
+    } else {
+      setIsError(false);
+    }
   };
 
   const getLoadingStatus = (status) => {
@@ -27,7 +33,7 @@ const ConverterForm = () => {
   };
   return (
     <>
-      <ErrorInfo text={error} />
+      <ErrorInfo text={error} isError={isError} />
       <div className={classes.inputWrapper}>
         <Form
           handleResult={getValues}

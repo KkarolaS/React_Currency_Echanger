@@ -9,6 +9,11 @@
   font-weight: 500;
 }
 
+.welcomeInfo {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 @media screen and (min-width: 992px) {
   .errorWrapper {
     margin-top: 60px;

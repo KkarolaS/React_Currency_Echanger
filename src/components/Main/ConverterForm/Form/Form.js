@@ -8,7 +8,6 @@ const Form = ({ handleResult, handleError, handleLoader }) => {
     e.preventDefault();
     const newNumber = e.currentTarget.userNumber.value;
     const newSelectValue = e.currentTarget.selectValue.value;
-
     if (newNumber > 0) {
       try {
         const rate = await fetchApiCurrencies(newSelectValue);
@@ -27,6 +26,9 @@ const Form = ({ handleResult, handleError, handleLoader }) => {
       }
     } else if (newNumber) {
       handleError("Podaj kwotę większą niż 0!");
+      handleResult(newNumber, 0);
+    } else {
+      handleError("Wprowadź kwotę do przewalutowania");
       handleResult(newNumber, 0);
     }
   };
