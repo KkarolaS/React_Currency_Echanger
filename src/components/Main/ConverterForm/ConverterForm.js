@@ -7,7 +7,7 @@ import classes from "./ConverterForm.module.css";
 
 const ConverterForm = () => {
   const [result, setResult] = useState(0);
-  const [error, setError] = useState("Wprowadź kwotę do przewalutowania");
+  const [error, setError] = useState("Enter the amount for currency exchange");
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -21,7 +21,7 @@ const ConverterForm = () => {
 
   const getError = (error) => {
     setError(error);
-    if (error !== "Wprowadź kwotę do przewalutowania") {
+    if (error !== "Enter the amount for currency exchange") {
       setIsError(true);
     } else {
       setIsError(false);

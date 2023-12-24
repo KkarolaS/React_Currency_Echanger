@@ -17,18 +17,18 @@ const Form = ({ handleResult, handleError, handleLoader }) => {
           handleError("");
         } else {
           handleResult(newNumber, 0);
-          handleError("Błąd serwera. Spróbuj ponownie później");
+          handleError("Server error. Please try again later");
         }
       } catch {
-        handleError("Błąd serwera. Spróbuj ponownie później");
+        handleError("Server error. Please try again later");
       } finally {
         handleLoader(false);
       }
     } else if (newNumber) {
-      handleError("Podaj kwotę większą niż 0!");
+      handleError("Enter an amount greater than 0!");
       handleResult(newNumber, 0);
     } else {
-      handleError("Wprowadź kwotę do przewalutowania");
+      handleError("Enter the amount for currency exchange");
       handleResult(newNumber, 0);
     }
   };
@@ -50,7 +50,7 @@ const Form = ({ handleResult, handleError, handleLoader }) => {
         name={"click"}
         typeName={"submit"}
         className={classes.exchangeBtn}
-        value={"Przelicz"}
+        value={"Exchange"}
       />
     </form>
   );
